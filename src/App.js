@@ -1,24 +1,21 @@
 import './App.css';
 import HelloWorld from './components/HellowWorld';
+import SayMyName from './components/SayMyName';
+import Pessoa from './components/Pessoa';
 
 function App() {
-
-  const name = 'Valdi';
-  const newName = name.toLocaleUpperCase();
-
-  function sum(a, b){
-    return a+b;
-  }
-
-  const url = 'https://via.placeholder.com/150'
+  const nome = "Maria";
   return (
     <div className="App">
-      <h2>Alterando o JSX</h2>
-      <p>Olá, {newName}</p>
-      <p>Soma: {2+2}</p>
-      <p>Soma com função: {sum(1,2)}</p>
-      <img src={url} alt="Minha Imagem"/>
-      <HelloWorld/>
+      <SayMyName nome="Valéria"/>
+      <SayMyName nome="Floki"/>
+      <SayMyName nome={nome}/>
+      <Pessoa 
+        nome="Valdi"
+        idade="31"
+        profissao="Analista de Sistemas"
+        foto="https://via.placeholder.com/150"
+      />
     </div>
   );
 }
